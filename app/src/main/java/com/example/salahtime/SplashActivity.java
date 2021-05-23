@@ -59,6 +59,7 @@ public class SplashActivity extends AppCompatActivity {
 
         } else {
             commonBridge.getLocation();
+            finish();
         }
 
 

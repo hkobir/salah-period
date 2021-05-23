@@ -17,13 +17,14 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
     private AppCompatButton syncButton;
-    private AppCompatTextView locationTV, salahTimeTV;
+    private AppCompatTextView locationTV, dateTv, fazarTv, dhurTv, asrTv, magribTv, ishaTv, sunRiseTv, sunSetTv, midNightTv;
     private SharedPreferences locationPref;
     private String latitude, longitude, address;
     private String LOCATION_PREFERENCE = "location_preferences";
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     LocationManager manager;
     private static final int REQUEST_LOCATION = 1;
+    private SimpleDateFormat formatter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +42,19 @@ public class MainActivity extends AppCompatActivity {
         //init
         syncButton = findViewById(R.id.syncBtn);
         locationTV = findViewById(R.id.locationTV);
-        salahTimeTV = findViewById(R.id.salahTimesTV);
+        dateTv = findViewById(R.id.dateTV);
+        fazarTv = findViewById(R.id.fazrTV);
+        dhurTv = findViewById(R.id.dhurTV);
+        asrTv = findViewById(R.id.asrTV);
+        magribTv = findViewById(R.id.magribTV);
+        ishaTv = findViewById(R.id.ishaTV);
+        sunRiseTv = findViewById(R.id.sunRiseTV);
+        sunSetTv = findViewById(R.id.sunSetTV);
+        midNightTv = findViewById(R.id.midNightTV);
         progressBar = findViewById(R.id.progressBar);
 
         //sync data variable
+        formatter = new SimpleDateFormat("dd MMMM yyyy");
         manager = (LocationManager) this.getSystemService(Context.LOCATION_SERVICE);
         commonBridge = new CommonBridge(this, progressBar);
         locationPref = this.getSharedPreferences(LOCATION_PREFERENCE, Context.MODE_PRIVATE);
@@ -104,14 +115,18 @@ public class MainActivity extends AppCompatActivity {
                 prayers.getBaseTimeZone()
         );
         ArrayList<String> prayerNames = prayers.getTimeNames();
-        StringBuilder str = new StringBuilder();
-        for (int i = 0; i < prayerTimes.size(); i++) {
-            str.append(prayerNames.get(i) + "   ----------   " + prayerTimes.get(i));
-            str.append("\n");
-            str.append("\n");
-//            System.out.println(prayerNames.get(i) + " - " + prayerTimes.get(i));
-        }
-        salahTimeTV.setText(str);
+        //set data
+        dateTv.setText(formatter.format(now));
+        sunRiseTv.setText("Sun rise: " + prayerTimes.get(1));
+        sunSetTv.setText("Sun set: " + prayerTimes.get(4));
+        fazarTv.setText(prayerTimes.get(0));
+        dhurTv.setText(prayerTimes.get(2));
+        asrTv.setText(prayerTimes.get(3));
+        magribTv.setText(prayerTimes.get(5));
+        ishaTv.setText(prayerTimes.get(6));
+        midNightTv.setText(prayerTimes.get(7));
+
+
     }
 
     @Override
