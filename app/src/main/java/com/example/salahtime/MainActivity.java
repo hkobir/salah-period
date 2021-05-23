@@ -117,8 +117,8 @@ public class MainActivity extends AppCompatActivity {
         ArrayList<String> prayerNames = prayers.getTimeNames();
         //set data
         dateTv.setText(formatter.format(now));
-        sunRiseTv.setText("Sun rise: " + prayerTimes.get(1));
-        sunSetTv.setText("Sun set: " + prayerTimes.get(4));
+        sunRiseTv.setText("Sun Rise: " + prayerTimes.get(1));
+        sunSetTv.setText("Sun Set: " + prayerTimes.get(4));
         fazarTv.setText(prayerTimes.get(0));
         dhurTv.setText(prayerTimes.get(2));
         asrTv.setText(prayerTimes.get(3));

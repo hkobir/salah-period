@@ -59,7 +59,6 @@ public class SplashActivity extends AppCompatActivity {
 
         } else {
             commonBridge.getLocation();
-            finish();
         }
 
 
@@ -75,5 +74,10 @@ public class SplashActivity extends AppCompatActivity {
                 Toast.makeText(this, "GPS permission needed!", Toast.LENGTH_SHORT).show();
             }
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        finish();
     }
 }

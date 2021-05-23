@@ -30,7 +30,7 @@
         android:id="@+id/syncBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="12dp"
         android:background="@drawable/custom_btn"
         android:text="Sync Now"
         android:textAllCaps="false"
@@ -74,7 +74,7 @@
         android:id="@+id/marginView2"
         android:layout_width="match_parent"
         android:layout_height="0.5dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:background="#604F80"
         app:layout_constraintTop_toBottomOf="@+id/methodTV" />
 
@@ -107,14 +107,14 @@
             style="@style/AppLargeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="8dp"
             android:text="15-06-2021"
             android:textColor="#BFFF5722"
-            android:textSize="18sp"
+            android:textSize="17sp"
             android:typeface="serif" />
 
         <LinearLayout
-            android:layout_marginVertical="15dp"
+            android:layout_marginVertical="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
@@ -147,7 +147,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
-                android:background="#fafafa"
+                android:background="@android:color/white"
                 android:paddingHorizontal="15dp"
                 android:paddingVertical="5dp">
 
@@ -175,8 +175,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
-                android:layout_marginTop="20dp"
-                android:background="#fafafa"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/white"
                 android:orientation="horizontal"
                 android:paddingHorizontal="15dp"
                 android:paddingVertical="5dp">
@@ -205,8 +205,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
-                android:layout_marginTop="20dp"
-                android:background="#fafafa"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/white"
                 android:orientation="horizontal"
                 android:paddingHorizontal="15dp"
                 android:paddingVertical="5dp">
@@ -235,8 +235,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
-                android:layout_marginTop="20dp"
-                android:background="#fafafa"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/white"
                 android:orientation="horizontal"
                 android:paddingHorizontal="15dp"
                 android:paddingVertical="5dp">
@@ -265,8 +265,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
-                android:layout_marginTop="20dp"
-                android:background="#fafafa"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/white"
                 android:orientation="horizontal"
                 android:paddingHorizontal="15dp"
                 android:paddingVertical="5dp">
@@ -294,8 +294,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginHorizontal="5dp"
-                android:layout_marginTop="20dp"
-                android:background="#fafafa"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/white"
                 android:orientation="horizontal"
                 android:paddingHorizontal="15dp"
                 android:paddingVertical="5dp">
